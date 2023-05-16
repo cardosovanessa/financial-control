@@ -12,63 +12,64 @@ import Grade from "./Grade";
 import Lista from "./Lista";
 
 export default function Financas() {
-    const {
-        data, alterarData, alterarExibicao, tipoExibicao,
-        transacoes, transacao, selecionar, salvar, excluir
-    } = useTransacao()
+	const {
+		data, alterarData, alterarExibicao, tipoExibicao,
+		transacoes, transacao, selecionar, salvar, excluir
+	} = useTransacao()
 
-    function renderizarControles() {
-        return (
-            <div className="flex justify-between">
-                <CampoMesAno
-                    data={data}
-                    dataMudou={alterarData}
-                />
-                <div className="flex gap-5">
-                    <Button
-                        className="bg-blue-500"
-                        leftIcon={<IconPlus />}
-                        onClick={() => selecionar(transacaoVazia)}
-                    >Nova transação</Button>
-                    <SegmentedControl
-                        data={[
-                            { label: <IconList />, value: 'lista' },
-                            { label: <IconLayoutGrid />, value: 'grade' }
-                        ]}
-                        onChange={tipo => alterarExibicao(tipo as TipoExibicao)}
-                    />
-                </div>
-            </div>
-        )
-    }
+	function renderizarControles() {
+		return (
+			<div className="flex justify-between">
+				<CampoMesAno
+					data={data}
+					dataMudou={alterarData}
+				/>
+				<div className="flex gap-5">
+					<Button
+						className="bg-gradient-to-r from-indigo-600 to-cyan-600
+						text-black"
+						leftIcon={<IconPlus />}
+						onClick={() => selecionar(transacaoVazia)}
+					>Nova transação</Button>
+					<SegmentedControl
+						data={[
+							{ label: <IconList />, value: 'lista' },
+							{ label: <IconLayoutGrid />, value: 'grade' }
+						]}
+						onChange={tipo => alterarExibicao(tipo as TipoExibicao)}
+					/>
+				</div>
+			</div>
+		)
+	}
 
-    function renderizarTransacoes() {
-        const props = { transacoes, selecionarTransacao: selecionar }
-        return tipoExibicao === 'lista' 
-            ? <Lista {...props} />
-            : <Grade {...props} />
-    }
+	function renderizarTransacoes() {
+		const props = { transacoes, selecionarTransacao: selecionar }
+		return tipoExibicao === 'lista' 
+			? <Lista {...props} />
+			: <Grade {...props} />
+	}
 
-    return (
-        <Pagina>
-            <Cabecalho />
-            <Conteudo className="gap-5">
-                {renderizarControles()}
-                {transacao ? (
-                    <Formulario
-                        transacao={transacao}
-                        salvar={salvar}
-                        excluir={excluir}
-                        cancelar={() => selecionar(null)}
-                    />
-                ) : transacoes.length > 0 ? (
-                    renderizarTransacoes()
-                ) : (
-                    <NaoEncontrado>
-                        Nenhuma transação encontrada
-                    </NaoEncontrado>
-                )}
-            </Conteudo>
-        </Pagina>
-    )
+	return (
+		<Pagina>
+			<Cabecalho />
+			<Conteudo className="gap-5">
+				{renderizarControles()}
+				{transacao ? (
+					<Formulario
+						transacao={transacao}
+						salvar={salvar}
+						excluir={excluir}
+						cancelar={() => selecionar(null)}
+					/>
+				) : transacoes.length > 0 ? (
+					renderizarTransacoes()
+				) : (
+					<NaoEncontrado>
+						Nenhuma transação encontrada
+					</NaoEncontrado>
+				)}
+			</Conteudo>
+		</Pagina>
+	)
 }

@@ -1,4 +1,4 @@
 export enum TipoTransacao {
-    RECEITA = 'receita',
-    DESPESA = 'despesa',
+  RECEITA = 'receita',
+  DESPESA = 'despesa',
 }

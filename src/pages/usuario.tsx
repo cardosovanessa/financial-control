@@ -8,17 +8,17 @@ import Formularios from "@/components/usuario/Formularios";
 
 export default function CadastroUsuario() {
 
-    return (
-        <Pagina>
-            <Cabecalho />
-            <Conteudo>
-                <TituloPagina
-                    icone={<IconForms />}
-                    principal="Dados Cadastrais"
-                    secundario={`Informações de ${usuario.email}`}
-                />
-                <Formularios />
-            </Conteudo>
-        </Pagina>
-    )
+  return (
+    <Pagina>
+      <Cabecalho />
+      <Conteudo>
+        <TituloPagina
+          icone={<IconForms />}
+          principal="Dados Cadastrais"
+          secundario={`Informações de ${usuario.email}`}
+        />
+        <Formularios />
+      </Conteudo>
+    </Pagina>
+  )
 }

@@ -3,21 +3,26 @@
 </p>
 
 <p align="center">
- Repositório Bitcent <b>versão completa</b>
+ <a href="#sobre-o-projeto">Sobre</a> •
+ <a href="#tecnologias">Tecnologias</a> •
+ <a href="#executando-o-projeto">Execução</a> • 
+  <a href="#license">License</a>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/TDEV-01-blue" alt="Semana Transformação.DEV #01" />
-  <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=blue" alt="License">   
-</p>
+<h1 align="center">Bitcent</h1>
+
+### Sobre o Projeto
+
+Bitcent é uma aplicação web para controle de finanças pessoais com landing page e dashboard. O projeto utiliza o Firebase para autenticação e armazenamento de dados.
+
+Projeto foi desenvolvido durante a Semana Tranformação.DEV, que ocorreu nos dias 8 a 12 de Maio de 2023.
 
 <h2 align="center">
-    <img alt="Bitcent" src=".github/cover.svg" />
+    <img alt="Bitcent" src=".github/cover.svg"/>
 </h2>
 
-<br>
 
-## Tecnologias
+### Tecnologias
 
 Lista de tecnologias utilizadas no projeto:
 
@@ -28,7 +33,9 @@ Lista de tecnologias utilizadas no projeto:
 - [TailwindCSS](https://tailwindcss.com/)
 - [Mantine](https://mantine.dev/)
 
-## Executando o projeto
+<h1></h1>
+
+### Executando o projeto
 
 1. Clone o repositório:
 
@@ -62,9 +69,6 @@ service cloud.firestore {
 }
 ```
 
-
-
-
 3. É preciso criar um arquivo `.env.local` na raiz do projeto com as seguintes variáveis:
 
 ```bash
@@ -85,17 +89,13 @@ $ npm run dev
 ```
 O app estará disponível no endereço http://localhost:3000.
 
-## Sobre o Projeto
+<h1></h1>
 
-Bitcent é uma aplicação web para controle de finanças pessoais com landing page e dashboard. O projeto utiliza o Firebase para autenticação e armazenamento de dados.
-
-Projeto foi desenvolvido durante a **[Semana Tranformação.DEV](https://transformacao.dev/)**, que ocorreu nos dias 8 a 12 de Maio de 2023.
-
-
-## License
+### License
 
 Esse projeto está sob a [licença MIT](LICENSE.md).
 
----
-
-Cod3r com ❤️ -  [Nossa Comunidade no Discord](https://discord.gg/JexVkcc3vr)
+<p align="left">
+  <img src="https://img.shields.io/badge/TDEV-01-blue" alt="Semana Transformação.DEV #01" />
+  <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=blue" alt="License">   
+</p>

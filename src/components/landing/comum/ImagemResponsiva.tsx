@@ -1,8 +1,8 @@
 import Image from "next/image"
 
 interface ImagemResponsivaProps {
-    imagem: any
-    className?: string
+  imagem: any
+  className?: string
 }
 
 export default function ImagemResponsiva(props: ImagemResponsivaProps) {

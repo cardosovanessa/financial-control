@@ -5,7 +5,7 @@
 <p align="center">
  <a href="#sobre-o-projeto">Sobre</a> •
  <a href="#tecnologias">Tecnologias</a> •
- <a href="#executando-o-projeto">Execução</a> • 
+ <a href="#executando-o-projeto">Execução</a> •
   <a href="#license">License</a>
 </p>
 
@@ -15,10 +15,9 @@
 
 Bitcent é uma aplicação web para controle de finanças pessoais com landing page e dashboard. O projeto utiliza o Firebase para autenticação e armazenamento de dados.
 
-Projeto foi desenvolvido durante a Semana Tranformação.DEV, que ocorreu nos dias 8 a 12 de Maio de 2023.
 
 <h2 align="center">
-    <img alt="Bitcent" src=".github/cover.svg"/>
+    <img alt="Bitcent" src=".github/cover.png"/>
 </h2>
 
 
@@ -40,7 +39,7 @@ Lista de tecnologias utilizadas no projeto:
 1. Clone o repositório:
 
 ```bash
-$ git clone https://github.com/transformacaodev/bitcent
+$ git clone https://github.com/cardosovanessa/financial-control.git
 $ cd bitcent
 ```
 
@@ -60,7 +59,7 @@ service cloud.firestore {
   		allow read: if (request.auth != null && request.auth.token.email == email);
       allow write: if (request.auth != null && request.auth.token.email == email);
     }
-    
+
     match /usuarios/{email} {
   		allow read: if (request.auth != null && request.auth.token.email == email);
       allow write: if (request.auth != null && request.auth.token.email == email);
@@ -97,5 +96,5 @@ Esse projeto está sob a [licença MIT](LICENSE.md).
 
 <p align="left">
   <img src="https://img.shields.io/badge/TDEV-01-blue" alt="Semana Transformação.DEV #01" />
-  <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=blue" alt="License">   
+  <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=blue" alt="License">
 </p>
